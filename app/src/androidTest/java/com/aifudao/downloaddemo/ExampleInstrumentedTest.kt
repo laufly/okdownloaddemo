@@ -21,4 +21,11 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getTargetContext()
         assertEquals("com.aifudao.downloaddemo", appContext.packageName)
     }
+
+    @Test
+    fun testSid() {
+        val sid = "000000000000000007207473"
+        val result = Integer.parseInt(sid).toString()
+        print(result)
+    }
 }

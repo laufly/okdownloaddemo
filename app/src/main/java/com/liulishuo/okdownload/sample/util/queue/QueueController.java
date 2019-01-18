@@ -51,7 +51,7 @@ public class QueueController {
 
         final DownloadContext.Builder builder = set.commit();
 
-        String url = "http://dldir1.qq.com/weixin/android/weixin6516android1120.apk";
+        String url = "http://testhfsfd-replayer.haofenshu.com/replayer_video/?sid=7207751";
         DownloadTask boundTask = builder.bind(url);
         TagUtil.saveTaskName(boundTask, "1. WeChat");
 

@@ -44,7 +44,8 @@ public class QueueActivity extends BaseSampleActivity {
     private QueueController controller;
     private QueueRecyclerAdapter adapter;
 
-    @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_queue);
 
@@ -55,13 +56,15 @@ public class QueueActivity extends BaseSampleActivity {
                 (CardView) findViewById(R.id.deleteActionView), findViewById(R.id.deleteActionTv));
     }
 
-    @Override protected void onDestroy() {
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
 
         this.controller.stop();
     }
 
-    @Override public int titleRes() {
+    @Override
+    public int titleRes() {
         return R.string.queue_download_title;
     }
 
@@ -90,7 +93,8 @@ public class QueueActivity extends BaseSampleActivity {
                                 int remainCount) {
             }
 
-            @Override public void queueEnd(@NonNull DownloadContext context) {
+            @Override
+            public void queueEnd(@NonNull DownloadContext context) {
                 actionView.setTag(null);
                 actionTv.setText(R.string.start);
                 // to cancel
@@ -121,7 +125,8 @@ public class QueueActivity extends BaseSampleActivity {
                             final AppCompatRadioButton parallelRb,
                             final CardView deleteActionView, final View deleteActionTv) {
         deleteActionView.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 controller.deleteFiles();
                 adapter.notifyDataSetChanged();
             }
@@ -129,7 +134,8 @@ public class QueueActivity extends BaseSampleActivity {
 
         actionTv.setText(R.string.start);
         actionView.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 final boolean started = v.getTag() != null;
 
                 if (started) {

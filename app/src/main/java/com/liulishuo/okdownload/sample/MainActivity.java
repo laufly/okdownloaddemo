@@ -47,6 +47,7 @@ public class MainActivity extends BaseListActivity {
                 NotificationActivity.class);
 //        holder.addItem(R.string.comprehensive_case_title, R.string.comprehensive_case_desc,
 //                ComprehensiveActivity.class);
+        holder.addItem(R.string.test_playback,R.string.test_playback_des,PlaybackTestActivity.class);
     }
 
     @Override public int titleRes() {
